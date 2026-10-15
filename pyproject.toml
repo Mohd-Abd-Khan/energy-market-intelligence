@@ -1,0 +1,35 @@
+[project]
+name = "energy-market-intelligence"
+version = "1.0.0"
+description = "Quantitative energy market intelligence and commodity price forecasting platform powered by EIA v2 API, SQLite, and Plotly Dash."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Energy Intelligence Team", email = "contact@energy-market-intelligence.local" },
+]
+license = { text = "MIT" }
+keywords = ["energy", "commodities", "forecasting", "arima", "plotly-dash", "eia-api", "quantitative-finance"]
+dependencies = [
+    "requests>=2.31.0",
+    "pandas>=2.2.0",
+    "numpy>=1.26.0",
+    "statsmodels>=0.14.0",
+    "scikit-learn>=1.4.0",
+    "dash>=2.17.0",
+    "plotly>=5.22.0",
+    "python-dotenv>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Mohd-Abd-Khan/energy-market-intelligence"
+Repository = "https://github.com/Mohd-Abd-Khan/energy-market-intelligence.git"
+Issues = "https://github.com/Mohd-Abd-Khan/energy-market-intelligence/issues"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v"
